@@ -27,7 +27,6 @@ app.use(compression())
 
 app.use(express.static('./dist'))
 
-
 app.use(function (err, req, res, next) {
   if (err.code !== 'EBADCSRFTOKEN') {
     return next()
@@ -43,5 +42,5 @@ module.exports = app.listen(port, function (err) {
     console.log(err)
     return
   }
-  console.log('Listening at http://localhost:' + port + '\n')
+  console.log('正在 Listening at http://localhost:' + port + '\n')
 })
