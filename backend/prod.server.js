@@ -26,8 +26,6 @@ registerRouter(app)
 app.use(compression())
 
 app.use(express.static('./dist'))
-app.use('/css', express.static('./dist/css'));
-app.use('/js', express.static( '.dist//js'));
 
 
 app.use(function (err, req, res, next) {
