@@ -25,13 +25,8 @@ registerRouter(app)
 
 app.use(compression())
 
-// app.use(express.static('./dist'))
-app.use('/css', express.static('./dist' + '/css'));
-app.use('/js', express.static('./dist' + '/js'));
-app.use('/woff', express.static('./dist' + '/fonts'));
-app.use('/ttf', express.static('./dist' + '/fonts'));
-app.use('/eot', express.static('./dist' + '/fonts'));
 app.use(express.static('./dist'))
+
 
 app.use(function (err, req, res, next) {
   if (err.code !== 'EBADCSRFTOKEN') {
