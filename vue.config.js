@@ -25,6 +25,9 @@ module.exports = {
   },
   productionSourceMap: false,
   publicPath: process.env.NODE_ENV === 'production' ? '/music-next/' : '/',
-  assetsPublicPath:'./',
   lintOnSave:false,
+
+  build:{
+    assetsPublicPath:'./',
+  }
 }
