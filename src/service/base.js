@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const ERR_OK = 0
-const baseURL = process.env.NODE_ENV === 'production' ? 'http://www.realiv.top/music-next/' : '/'
+const baseURL = process.env.NODE_ENV === 'production' ? '106.52.70.152' : '/'
 
 axios.defaults.baseURL = baseURL
 
