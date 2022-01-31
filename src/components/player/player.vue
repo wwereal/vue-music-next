@@ -81,12 +81,14 @@
           </scroll>
 
         </div>
-
+     <!-- 底部 -->
         <div class="bottom">
+          <!-- 视图点 -->
           <div class="dot-wrapper">
             <span class="dot" :class="{active:currentShow==='cd'}"></span>
             <span class="dot" :class="{active:currentShow==='lyric'}"></span>
           </div>
+          <!-- 进度条部分 -->
           <div class="progress-wrapper">
             <span class="time time-l">{{formatTime(currentTime)}}</span>
             <div class="progress-bar-wrapper">
@@ -100,6 +102,7 @@
             <span class="time time-r">{{formatTime(currentSong.duration)}}</span>
           </div>
 
+          <!-- 控制台部分 -->
           <div class="operators">
             <div class="icon i-left">
               <i @click="changeMode" :class="modeIcon"></i>
@@ -117,11 +120,11 @@
               <i @click="toggleFavorite(currentSong)" :class="getFavoriteIcon(currentSong)"></i>
             </div>
           </div>
-          
+
         </div>
       </div>
     </transition>
-    
+
     <mini-player
       :progress="progress"
       :toggle-play="togglePlay"
