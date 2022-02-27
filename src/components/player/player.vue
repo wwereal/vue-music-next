@@ -131,6 +131,7 @@
     ></mini-player>
     <audio
       ref="audioRef"
+      @play="play"
       @pause="pause"
       @canplay="ready"
       @error="error"
@@ -250,6 +251,9 @@
           return
         }
         store.commit('setPlayingState', !playing.value)
+      }
+      function play() {
+        store.commit('setPlayingState', true)
       }
 
       function pause() {
