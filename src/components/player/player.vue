@@ -357,6 +357,7 @@
         progress,
         goBack,
         togglePlay,
+        play,
         pause,
         prev,
         next,

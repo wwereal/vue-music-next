@@ -6,7 +6,7 @@
       <component :is="Component"/>
     </keep-alive>
   </router-view>
-  
+
   <router-view
     :style="viewStyle"
     name="user"
@@ -18,7 +18,7 @@
       </keep-alive>
     </transition>
   </router-view>
-  
+
   <player></player>
 </template>
 

@@ -642,9 +642,6 @@ function registerSearch(app) {
   app.get('/api/search', (req, res) => {
     const url = 'https://c.y.qq.com/soso/fcgi-bin/search_for_qq_cp'
     // const url = 'https://c.y.qq.com/splcloud/fcgi-bin/smartbox_new.fcg'
-
-    
-    
     const { query, page, showSinger } = req.query
 
     const data = {

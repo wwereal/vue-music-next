@@ -1,6 +1,5 @@
 <template>
   <div class="tab">
-    
     <router-link
       class="tab-item"
       v-for="tab in tabs"
@@ -32,7 +31,7 @@
           {
             name: '排行',
             path: '/top-list'
-          },
+          }
           // {
           //   name: '搜索',
           //   path: '/search'

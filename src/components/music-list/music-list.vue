@@ -33,7 +33,7 @@
         class="filter"
         :style="filterStyle"
       ></div>
-      
+
     </div>
     <scroll
       class="list"

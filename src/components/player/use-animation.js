@@ -72,7 +72,7 @@ export default function useAnimation() {
     const paddingBottom = 30
     const paddingTop = 80
     const width = window.innerWidth * 0.8
-    const x = -(window.innerWidth / 2 - paddingLeft) //负数
+    const x = -(window.innerWidth / 2 - paddingLeft) // 负数
     const y = window.innerHeight - paddingTop - width / 2 - paddingBottom
     const scale = targetWidth / width
 
