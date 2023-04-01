@@ -1,6 +1,6 @@
 <template>
   <div class="singer" v-loading="!singers.length">
-    
+
     <index-list
       :data="singers"
       @select="selectSinger"

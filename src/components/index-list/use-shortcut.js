@@ -35,8 +35,7 @@ export default function useShortcut(props, groupRef) {
     index = Math.max(0, Math.min(shortcutList.value.length - 1, index))
     const targetEl = groupRef.value.children[index]
     const scroll = scrollRef.value.scroll
-    
-    
+
     scroll.scrollToElement(targetEl, 0)
   }
 

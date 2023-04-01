@@ -8,8 +8,6 @@ export default function useFixed(props) {
   const currentIndex = ref(0)
   const distance = ref(0)
 
- 
-
   const fixedStyle = computed(() => {
     const distanceVal = distance.value
     const diff = (distanceVal > 0 && distanceVal < TITLE_HEIGHT) ? distanceVal - TITLE_HEIGHT : 0

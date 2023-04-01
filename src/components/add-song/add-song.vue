@@ -147,7 +147,7 @@
 
       return {
         visible,
-        // query,
+        query,
         scrollRef,
         messageRef,
         currentIndex,

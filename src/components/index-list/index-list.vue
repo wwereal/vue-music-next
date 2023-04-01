@@ -25,7 +25,7 @@
         </ul>
       </li>
     </ul>
-    
+
     <div
       class="fixed"
       v-show="fixedTitle"
@@ -52,14 +52,12 @@
       </ul>
     </div>
   </scroll>
-  <div ref="test"></div>
 </template>
 
 <script>
   import Scroll from '@/components/wrap-scroll/index'
   import useFixed from './use-fixed'
   import useShortcut from './use-shortcut'
-  
 
   export default {
     name: 'index-list',
@@ -77,11 +75,9 @@
       const { groupRef, onScroll, fixedTitle, fixedStyle, currentIndex } = useFixed(props)
       const { shortcutList, scrollRef, onShortcutTouchStart, onShortcutTouchMove } = useShortcut(props, groupRef)
 
-
       function onItemClick(item) {
         emit('select', item)
       }
-
 
       return {
         onItemClick,
