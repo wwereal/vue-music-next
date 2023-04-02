@@ -3,11 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "deploy": "npm run build && nohup node backend/prod.server.js &",
-    "vercel-deploy": "npm run build && node backend/prod.server.js &"
+    "serve": "set NODE_OPTIONS=\"--openssl-legacy-provider\" && vue-cli-service serve",
+    "build": "set NODE_OPTIONS=\"--openssl-legacy-provider\" && vue-cli-service build",
+    "deploy": "./scripts/init.sh && nohup node backend/prod.server.js &",
+    "vercel-deploy": "./scripts/init.sh && node backend/prod.server.js &"
   },
   "dependencies": {
     "@better-scroll/core": "^2.2.1",
