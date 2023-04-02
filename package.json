@@ -6,8 +6,8 @@
     "set-opt": "set NODE_OPTIONS=\"--openssl-legacy-provider\"",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "deploy": "./scripts/init.sh && nohup node backend/prod.server.js &",
-    "vercel-deploy": "./scripts/init.sh && node backend/prod.server.js &"
+    "deploy": "npm run build && nohup node backend/prod.server.js &",
+    "vercel-deploy": "npm run build && node backend/prod.server.js &"
   },
   "dependencies": {
     "@better-scroll/core": "^2.2.1",
