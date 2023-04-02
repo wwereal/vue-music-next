@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "set NODE_OPTIONS=\"--openssl-legacy-provider\" && vue-cli-service serve",
-    "build": "set NODE_OPTIONS=\"--openssl-legacy-provider\" && vue-cli-service build",
+    "set-opt": "set NODE_OPTIONS=\"--openssl-legacy-provider\"",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
     "deploy": "./scripts/init.sh && nohup node backend/prod.server.js &",
     "vercel-deploy": "./scripts/init.sh && node backend/prod.server.js &"
   },
