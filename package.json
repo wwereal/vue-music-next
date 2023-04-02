@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "set-opt": "set NODE_OPTIONS=\"--openssl-legacy-provider\"",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "deploy": "npm run build && nohup node backend/prod.server.js &",
