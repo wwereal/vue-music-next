@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+      "isolatedModules": true,
+      "allowSyntheticDefaultImports": true,
+      "baseUrl": "./",
+      "paths": {
+        "@/*": ["src/*"]
+      },
+      "noImplicitThis": true,
+      "strict": true
+  },
+  "exclude": [
+      "node_modules"
+  ]
+}
