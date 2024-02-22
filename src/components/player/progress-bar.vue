@@ -41,9 +41,9 @@
     },
     computed: {
       progressStyle() {
-        return {width:`${this.offset}px`,backgroundColor:'#DC143C'}
+        return { width: `${this.offset}px`, backgroundColor: '#DC143C' }
       },
-      //等价于return `width:${this.offset}px`
+      // 等价于return `width:${this.offset}px`
       btnStyle() {
         return `transform:translate3d(${this.offset}px,0,0)`
       }

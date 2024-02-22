@@ -8,12 +8,12 @@
             <i class="icon-close"></i>
           </div>
         </div>
-        <!-- <div class="search-input-wrapper">
+        <div class="search-input-wrapper">
           <search-input
             v-model="query"
             placeholder="搜索歌曲"
           ></search-input>
-        </div> -->
+        </div>
         <div v-show="!query">
           <switches
             :items="['最近播放', '搜索历史']"
