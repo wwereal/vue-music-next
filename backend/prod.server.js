@@ -3,6 +3,7 @@ const compression = require('compression')
 const cookieParser = require('cookie-parser')
 const csrf = require('xsrf')
 const registerRouter = require('./router')
+const path = require('path')
 
 const port = process.env.PORT || 9002
 
@@ -22,6 +23,9 @@ app.use(csrfProtection) // 使用csrfProtection中间件进行CSRF保护
 // 当访问根路径'/'时，将一个名为'XSRF-TOKEN'的cookie设置为当前请求的CSRF令牌，并将请求传递给下一个中间件。
 app.get('/', function (req, res, next) {
   res.cookie('XSRF-TOKEN', req.csrfToken()) // 将CSRF令牌设置为'XSRF-TOKEN'的cookie
+  res.sendFile('index.html', {
+    root: path.join(__dirname, 'dist')
+  })
   return next()
 })
 
@@ -29,7 +33,7 @@ registerRouter(app) // 注册自定义路由模块
 
 app.use(compression()) // 使用compression中间件对响应数据进行压缩
 
-app.use(express.static('./dist')) // 提供静态文件服务
+// app.use(express.static('./dist')) // 提供静态文件服务
 
 // 处理CSRF令牌错误的中间件
 app.use(function (err, req, res, next) {
